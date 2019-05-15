@@ -1,10 +1,10 @@
 import React from  'react';
 
 const ImageList = ({ images }) => {
-  const imageList = images.map(({urls, id}) => {
+  const imageList = images.map(({urls, id, description}) => {
     return (
-      <div className="four wide column">
-        <img className="ui medium rounded image" src={urls.regular} key={id} />
+      <div className="four wide column" key={id}>
+        <img className="ui medium rounded image" alt={description} src={urls.regular} />
       </div>
     );
   })
