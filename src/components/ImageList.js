@@ -1,9 +1,5 @@
 import React from  'react';
 
-const parseImages = (imageList) => {
-  return
-}
-
 const ImageList = ({ images }) => {
   const imageList = images.map(img => {
     return (
