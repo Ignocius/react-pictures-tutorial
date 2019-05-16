@@ -1,15 +1,15 @@
+import './ImageList.css';
 import React from  'react';
+import ImageCard from  './ImageCard';
 
 const ImageList = ({ images }) => {
-  const imageList = images.map(({urls, id, description}) => {
+  const imageList = images.map((image) => {
     return (
-      <div className="four wide column" key={id}>
-        <img className="ui medium rounded image" alt={description} src={urls.regular} />
-      </div>
+     <ImageCard image={image}  key={image.id}/>
     );
   })
   return (
-    <div className="ui grid">
+    <div className="image-list">
       {imageList}
     </div>
   );
